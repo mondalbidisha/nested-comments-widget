@@ -87,12 +87,13 @@
 
 		//commentDiv which will have comment and username
 		var commentDiv = document.createElement("div");
-		var commentNameAndText = document.createTextNode(comment.userName+": " + comment.text);
+		var commentNameAndText = document.createTextNode(comment.userName+" : " + comment.text);
+		// commentDiv.classList.add('post-comment')
 		commentDiv.appendChild(commentNameAndText)
 
 		// votes div which will have votes along with upvote and downvote
 		var votesDiv  = document.createElement("div");
-		var votes = document.createTextNode("Votes:"+comment.votes);
+		var votes = document.createTextNode("Votes : "+comment.votes);
 		var upvoteBtn = document.createElement("button");
 		upvoteBtn.innerHTML = 'Upvote';
 		upvoteBtn.onclick = function(){
@@ -127,6 +128,7 @@
 		var postReplyBtn = document.createElement("button")
 		postReplyBtn.innerHTML = "POST"
 		postReplyBtn.onclick = function(){
+
 			var content = commentInput.value
 			var user = usernameInput.value
 			var reply = new Comment(user,content,0,[])
@@ -147,6 +149,7 @@
 		var replyBtn = document.createElement("button")
 		replyBtn.innerHTML = 'Reply';
 		replyBtn.onclick = function(){
+
 			replyBtn.style.cssText = 'display:none';
 			hiddenReplyDiv.style.cssText = 'display:block';
 		}

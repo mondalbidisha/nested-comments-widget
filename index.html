@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 	<head>
+		<link rel="stylesheet" href="index.css">
 		<meta charset="utf-8">
 		<title>Simple Commenting Widget</title>
 	</head>
@@ -8,11 +9,10 @@
 			<form onsubmit="event.preventDefault();">
 				<textarea name="joinDiscussion" id="joinDiscussion" cols=50 placeholder="Join the discussion"></textarea>
 				<div id="postComment">
-					<label>UserName:</label><input type="input" id="userName"/>
+					<label>UserName:</label><input type="text" id="userName"/>
 					<input type="button" value="Post" id="post">
 				</div>
 				<section id="viewComments">
-					
 				</section>
 			</form>
 	</body>
